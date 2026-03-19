@@ -14,7 +14,12 @@ namespace Projeto1Asp.Controllers
         }
 
         public IActionResult Index()
-        {
+        { // ViewBag é para guardar e transferir dados
+            ViewBag.NomeUsuario = "Igor";
+            ViewBag.EmailUsuario = "igor@email.com";
+            ViewBag.NIvelAcesso = "Usuario";
+            ViewBag.DataAcesso = DateTime.Now.ToLongDateString();
+    
             return View();
         }
         public IActionResult Sobre()
